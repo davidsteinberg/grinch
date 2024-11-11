@@ -104,13 +104,17 @@ class Main extends Phaser.Scene {
     this.bed.setImmovable(true);
     this.bed.setScale(c.bed.scale);
 
-    // Who
-    this.who = this.physics.add.sprite(c.npc.who.x, c.npc.who.y, "who");
-    this.who.setScale(c.npc.who.scale);
-
     // Fox
     this.fox = this.physics.add.sprite(c.npc.fox.x, c.npc.fox.y, "fox");
     this.fox.setScale(c.npc.fox.scale);
+    this.fox.setSize(c.npc.fox.innerZone.width, c.npc.fox.innerZone.height);
+    this.fox.setOffset(c.npc.fox.innerZone.x, c.npc.fox.innerZone.y);
+
+    // Who
+    this.who = this.physics.add.sprite(c.npc.who.x, c.npc.who.y, "who");
+    this.who.setScale(c.npc.who.scale);
+    this.who.setSize(c.npc.who.innerZone.width, c.npc.who.innerZone.height);
+    this.who.setOffset(c.npc.who.innerZone.x, c.npc.who.innerZone.y);
 
     // Present
     this.present = this.physics.add.sprite(c.present.x, c.present.y, "present");

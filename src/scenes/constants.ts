@@ -3,9 +3,9 @@ const grinch = {
   y: 125,
   scale: 0.12,
   zone: {
-    x: 44,
+    x: 60,
     y: 225,
-    width: 133,
+    width: 105,
     height: 133,
   },
   velocity: 100,
@@ -20,12 +20,24 @@ const npc = {
     zone: {
       size: 100,
     },
+    innerZone: {
+      x: 23,
+      y: 60,
+      width: 110,
+      height: 163,
+    },
     velocity: 25,
   },
   fox: {
     x: 120,
     y: 125,
     scale: 0.08,
+    innerZone: {
+      x: 23,
+      y: 100,
+      width: 190,
+      height: 180,
+    },
     zone: {
       size: 100,
     },
